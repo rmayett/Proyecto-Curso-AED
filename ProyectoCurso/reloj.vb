@@ -1,20 +1,20 @@
 ﻿Public Class reloj
     Dim op As Integer = 1
-    Public punt As Integer = 100
-    Private Sub reloj_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public punt As Integer = 100 'puntuacion
+    Private Sub reloj_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'carga el formulario
         Me.Text = "Puntuación del Jugador: " & Form1.TXTname.Text
     End Sub
-
+    'actividad del boton go
     Private Sub BTNgo_Click(sender As Object, e As EventArgs) Handles BTNgo.Click
         Timer1.Enabled = True
     End Sub
-
+    'evento del timer
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        op += 1
-        If op > 6 Then
+        op += 1 'incremento de la variable op que hace que cambie de color los colores de los puntajes 
+        If op > 6 Then 'reinicia el valor de la variable para volver a empezar desde el primer valor 
             op = 1
         End If
-        Select Case op
+        Select Case op 'va cambiando los colores de los puntajes
             Case 1
                 Form1.TXTmin20.BackColor = Color.Gold
                 Form1.TXT20.BackColor = Color.DarkBlue
@@ -35,12 +35,12 @@
                 Form1.TXTmin20.BackColor = Color.DarkBlue
         End Select
     End Sub
-
+    'activividad del boton stop detiene el timer
     Private Sub BTNstop_Click(sender As Object, e As EventArgs) Handles BTNstop.Click
-        Timer1.Enabled = False
+        Timer1.Enabled = False 'detiene el timer
         If op = 1 Then
-            punt = punt + 20
-            Form1.LBLpuntos.Text = "Ganaste: 20 Puntos"
+            punt = punt + 20 'suma los puntos al puntaje total 
+            Form1.LBLpuntos.Text = "Ganaste: 20 Puntos" 'muestra el puntaje ganado o perdido 
         ElseIf op = 2 Then
             punt = punt - 30
             Form1.LBLpuntos.Text = "Perdiste: 30 Puntos"
@@ -57,20 +57,20 @@
             punt = punt - 20
             Form1.LBLpuntos.Text = "Perdiste: 20 Puntos"
         End If
-        LBLpunt.Text = "Puntuacion: " & punt
-        If punt < 1 Then
+        LBLpunt.Text = "Puntuacion: " & punt 'imprime el punjae total
+        If punt < 1 Then 'verifica si tl puntaje es menor a 1 para saber si el usuario perdio y terminar el juego
             BTNgo.Enabled = False
             BTNstop.Enabled = False
             Form1.LBLpuntos.Text = "Puntuacion: " & punt
-            Me.Close()
-            MsgBox("Perdiste :(", MsgBoxStyle.Critical)
+            Me.Close() 'cierra el formulario
+            MsgBox("Perdiste :(", MsgBoxStyle.Critical) 'muetsra el mensaje de terminado el juego 
         End If
-        If punt > 199 Then
+        If punt > 199 Then 'verifica si el puntaje es mayor a 199 y si el usuario gano y termina el juego
             BTNgo.Enabled = False
             BTNstop.Enabled = False
             Form1.LBLpuntos.Text = "Puntuacion: " & punt
-            Me.Close()
-            MsgBox("¡Felicidades, Ganaste!", MsgBoxStyle.Information)
+            Me.Close() 'cierra el formulario 
+            MsgBox("¡Felicidades, Ganaste!", MsgBoxStyle.Information) 'muestra el mensaje de terminado el juego 
         End If
     End Sub
 End Class

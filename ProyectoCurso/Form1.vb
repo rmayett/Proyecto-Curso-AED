@@ -1,23 +1,23 @@
 ﻿Public Class Form1
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'carga del formulario
         MsgBox("¡Bienvenido al juego de la ruleta!" & vbCrLf & "Antes de empezar, por favor escribe tu nombre", MsgBoxStyle.Information)
     End Sub
 
-    Private Sub BTNok_Click(sender As Object, e As EventArgs) Handles BTNok.Click
+    Private Sub BTNok_Click(sender As Object, e As EventArgs) Handles BTNok.Click 'Actividad del boton ok
         LBLbien.Text = "Hola " & TXTname.Text & vbCrLf & "Utiliza la segunda ventana para controlar la ruleta"
         TXTname.Enabled = False
         BTNok.Enabled = False
         BTNrest.Enabled = True
         reloj.Show()
     End Sub
-
+    'activa el boton ok cuando el ususrio ingresa un nombre
     Private Sub TXTname_TextChanged(sender As Object, e As EventArgs) Handles TXTname.TextChanged
         If TXTname.Text <> "" Then
             BTNok.Enabled = True
         End If
     End Sub
-
+    'restablece todo a valores predeterminados 
     Private Sub BTNrest_Click(sender As Object, e As EventArgs) Handles BTNrest.Click
         TXTname.Text = ""
         reloj.Close()

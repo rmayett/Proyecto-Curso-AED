@@ -20,6 +20,7 @@
     'restablece todo a valores predeterminados 
     Private Sub BTNrest_Click(sender As Object, e As EventArgs) Handles BTNrest.Click
         TXTname.Text = ""
+        Tiros.Close()
         reloj.Close()
         reloj.punt = 100
         LBLbien.Text = ""

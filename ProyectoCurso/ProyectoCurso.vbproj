@@ -120,6 +120,12 @@
     <Compile Include="reloj.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Tiros.Designer.vb">
+      <DependentUpon>Tiros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tiros.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reloj.resx">
       <DependentUpon>reloj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tiros.resx">
+      <DependentUpon>Tiros.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

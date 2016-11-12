@@ -69,7 +69,7 @@ Public Class reloj
             Me.Close() 'cierra el formulario
             MsgBox("Perdiste :(", MsgBoxStyle.Critical) 'muetsra el mensaje de terminado el juego
             Tiros.Show()
-            While i < pila.Count
+            While i <= pila.Count
                 Tiros.LBLpuntos.Text = Tiros.LBLpuntos.Text & vbCrLf & pila.Pop()
                 i = +1
             End While

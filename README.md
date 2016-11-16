@@ -6,5 +6,6 @@ Proyecto V1.0.0
 * Daniel Manzano Saturnino
 * Anibal Medina Mena
 * Adair Peña Pescador
+
 ## Requisitos:
 [Version de .NET Framework 4.6](https://www.microsoft.com/es-mx/download/details.aspx?id=48130)

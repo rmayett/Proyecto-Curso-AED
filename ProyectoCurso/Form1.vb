@@ -20,7 +20,7 @@
     'restablece todo a valores predeterminados 
     Private Sub BTNrest_Click(sender As Object, e As EventArgs) Handles BTNrest.Click
         TXTname.Text = ""
-        Tiros.Close()
+        Tiros.Close() 'se cierran las ventanas
         reloj.Close()
         reloj.punt = 100
         LBLbien.Text = ""
@@ -34,5 +34,9 @@
         TXTmin20.BackColor = Color.Gold
         TXTmin30.BackColor = Color.Gold
         TXTmin60.BackColor = Color.Gold
+    End Sub
+    'subrutina de las reglas
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MsgBox("Las reglas con muy sencillas" & vbCrLf & "El jugador empieza con 100 puntos hace girar la ruleta y gana :D o pierde puntos :( para ganar necesitas obtener 200 puntos o mas pero si te quedas sin puntos pierdes" & vbCrLf & "Buena suerte jugador :)", MsgBoxStyle.Information)
     End Sub
 End Class

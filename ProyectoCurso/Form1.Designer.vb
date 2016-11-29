@@ -35,6 +35,7 @@ Partial Class Form1
         Me.TXT50 = New System.Windows.Forms.TextBox()
         Me.TXT10 = New System.Windows.Forms.TextBox()
         Me.LBLpuntos = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -168,12 +169,23 @@ Partial Class Form1
         Me.LBLpuntos.Size = New System.Drawing.Size(0, 21)
         Me.LBLpuntos.TabIndex = 11
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(445, 94)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(124, 32)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Reglas"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AcceptButton = Me.BTNok
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(605, 343)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.LBLpuntos)
         Me.Controls.Add(Me.TXT10)
         Me.Controls.Add(Me.TXT50)
@@ -205,5 +217,6 @@ Partial Class Form1
     Friend WithEvents TXT50 As System.Windows.Forms.TextBox
     Friend WithEvents TXT10 As System.Windows.Forms.TextBox
     Friend WithEvents LBLpuntos As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class
